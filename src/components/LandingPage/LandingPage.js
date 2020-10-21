@@ -24,6 +24,7 @@ class LandingPage extends Component {
         <div className="grid">
           <div className="grid-col grid-col_8">
             <p>
+              Testing testing 123
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
               id felis metus. Vestibulum et pulvinar tortor. Morbi pharetra
               lacus ut ex molestie blandit. Etiam et turpis sit amet risus
@@ -54,16 +55,7 @@ class LandingPage extends Component {
               Nullam non fermentum mauris. Sed in enim ac turpis faucibus
               pretium in sit amet nisi.
             </p>
-          </div>
-          <div className="grid-col grid-col_4">
-            <RegisterForm />
 
-            <center>
-              <h4>Already a Member?</h4>
-              <button className="btn btn_sizeSm" onClick={this.onLogin}>
-                Login
-              </button>
-            </center>
           </div>
         </div>
       </div>
