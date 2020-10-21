@@ -4,6 +4,7 @@ import mapStoreToProps from '../../redux/mapStoreToProps';
 
 class RegisterForm extends Component {
   state = {
+    email_address: '',
     username: '',
     password: '',
   };
@@ -14,6 +15,7 @@ class RegisterForm extends Component {
     this.props.dispatch({
       type: 'REGISTER',
       payload: {
+        email_address: this.state.email_address,
         username: this.state.username,
         password: this.state.password,
       },
@@ -27,6 +29,8 @@ class RegisterForm extends Component {
   };
 
   render() {
+    console.log(this.state);
+    
     return (
       <form className="formPanel" onSubmit={this.registerUser}>
         <h2>Register User</h2>
@@ -35,6 +39,20 @@ class RegisterForm extends Component {
             {this.props.store.errors.registrationMessage}
           </h3>
         )}
+
+        <div>
+          <label htmlFor="email_address">
+            Email Address:
+            <input
+              type="text"
+              name="email address"
+              value={this.state.email_address}
+              required
+              onChange={this.handleInputChangeFor('email_address')}
+            />
+          </label>
+        </div>
+
         <div>
           <label htmlFor="username">
             Username:
@@ -47,6 +65,7 @@ class RegisterForm extends Component {
             />
           </label>
         </div>
+        
         <div>
           <label htmlFor="password">
             Password:
