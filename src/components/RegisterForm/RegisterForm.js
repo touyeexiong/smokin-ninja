@@ -7,6 +7,7 @@ class RegisterForm extends Component {
     email_address: '',
     username: '',
     password: '',
+    access_level: 1,
   };
 
   registerUser = (event) => {
@@ -18,6 +19,7 @@ class RegisterForm extends Component {
         email_address: this.state.email_address,
         username: this.state.username,
         password: this.state.password,
+        access_level: this.state.access_level
       },
     });
   }; // end registerUser
