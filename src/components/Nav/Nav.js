@@ -24,22 +24,26 @@ const Nav = (props) => {
   }
 
   return (
-    <>
-    <div className="nav">
-  <AppBar postion="static" className="nav">
-    <Toolbar>
-      <Grid 
+    <div className="">
 
+  <AppBar postion="static">
+    <Toolbar color="inherit">
+      <Grid 
+      justify="space-between"
       container 
       spacing ={24}>
+        <Grid item>
             <IconButton>
               <MenuIcon />
             </IconButton>
             <Link to="/home">
               <h2 className="nav-title">Smokin' Ninjas</h2>
             </Link>
+            </Grid>
       </Grid>
-      <Grid color="inherit" >
+      <Grid 
+      item 
+      color="inherit" >
             <div className="nav-right">
               <Link className="nav-link" to={loginLinkData.path}>
                 {/* Show this link if they are logged in or not,
@@ -64,7 +68,7 @@ const Nav = (props) => {
       </Grid>
     </Toolbar>
   </AppBar>
-      </div>
+
     {/* <div className="nav">
       <Link to="/home">
         <h2 className="nav-title">Smokin' Ninjas</h2>
@@ -91,7 +95,7 @@ const Nav = (props) => {
         </Link> */}
       {/* </div> */}
     {/* </div> */}
-    </>
+    </div>
   );
 };
 
