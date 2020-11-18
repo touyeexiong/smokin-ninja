@@ -24,9 +24,9 @@ const Nav = (props) => {
   }
 
   return (
-    <div className="">
+    <div className="nav">
 
-  <AppBar postion="static">
+  <AppBar position="static">
     <Toolbar color="inherit">
       <Grid 
       justify="space-between"
@@ -42,6 +42,7 @@ const Nav = (props) => {
             </Grid>
       </Grid>
       <Grid 
+      xs={12}
       item 
       color="inherit" >
             <div className="nav-right">
@@ -77,24 +78,24 @@ const Nav = (props) => {
         <Link className="nav-link" to={loginLinkData.path}> */}
           {/* Show this link if they are logged in or not,
           but call this link 'Home' if they are logged in,
-          and call this link 'Login / Register' if they are not */}
-          {/* {loginLinkData.text}
-        </Link> */}
+        //   and call this link 'Login / Register' if they are not */}
+        {/* //   {loginLinkData.text}
+        // </Link> */}
         {/* Show the link to the info page and the logout button if the user is logged in */}
-        {/* {props.store.user.id && (
-          <>
-            <Link className="nav-link" to="/info">
-              Info Page
-            </Link>
-            <LogOutButton className="nav-link" />
-          </>
-        )} */}
+        {/* // {props.store.user.id && ( */}
+        {/* //   <>
+        //     <Link className="nav-link" to="/info">
+        //       Info Page
+        //     </Link>
+        //     <LogOutButton className="nav-link" />
+        //   </>
+        // )} */}
         {/* Always show this link since the about page is not protected */}
-        {/* <Link className="nav-link" to="/about">
-          About
-        </Link> */}
-      {/* </div> */}
-    {/* </div> */}
+    {/* //     <Link className="nav-link" to="/about">
+    //       About
+    //     </Link>
+    //   </div> */}
+    {/* // </div> */}
     </div>
   );
 };
