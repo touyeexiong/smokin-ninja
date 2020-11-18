@@ -20,7 +20,7 @@ const Nav = (props) => {
 
   if (props.store.user.id != null) {
     loginLinkData.path = '/user';
-    loginLinkData.text = 'Home';
+    loginLinkData.text = '';
   }
 
   return (
@@ -42,7 +42,6 @@ const Nav = (props) => {
             </Grid>
       </Grid>
       <Grid 
-      xs={12}
       item 
       color="inherit" >
             <div className="nav-right">
