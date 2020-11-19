@@ -23,6 +23,10 @@ const Nav = (props) => {
     loginLinkData.text = '';
   }
 
+  let handleOrderOnline =  () => {
+    this.props.history.push('/order');
+  }
+
   return (
     <div className="nav">
 
@@ -44,10 +48,13 @@ const Nav = (props) => {
                 </Link>
               </Typography>
             </Grid>
-            <Grid item>
-              <Button color="inherit">
+            <Grid>
+              <Button 
+              component={ Link } 
+              to="/order" 
+              variant="contained">
                 Order Online
-          </Button>
+              </Button>
             </Grid>
           </Grid>
           {/* <Grid 
