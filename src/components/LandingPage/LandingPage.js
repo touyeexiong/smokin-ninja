@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Grid from "@material-ui/core/Grid";
+import Button from '@material-ui/core/Button';
 
 
 // CUSTOM COMPONENTS
@@ -66,6 +67,11 @@ class LandingPage extends Component {
             </p>
           </div>
         </div>
+        <Button
+          variant="contained"
+          color="primary">
+          View Our Menu
+        </Button>
       </div>
       </>
     );

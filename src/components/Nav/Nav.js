@@ -10,7 +10,8 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import Grid from '@material-ui/core/Grid'
+import Grid from '@material-ui/core/Grid';
+import styled from 'styled-components';
 
 const Nav = (props) => {
   let loginLinkData = {
@@ -26,6 +27,10 @@ const Nav = (props) => {
   let handleOrderOnline =  () => {
     this.props.history.push('/order');
   }
+
+  const Button = styled.button`
+  color: yellow;
+  `
 
   return (
     <div className="nav">
@@ -50,6 +55,7 @@ const Nav = (props) => {
             </Grid>
             <Grid>
               <Button 
+              primary
               component={ Link } 
               to="/order" 
               variant="contained">
