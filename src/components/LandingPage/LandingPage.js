@@ -6,7 +6,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Grid from "@material-ui/core/Grid";
-import Button from '@material-ui/core/Button';
+import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 
 // CUSTOM COMPONENTS
@@ -29,6 +30,10 @@ class LandingPage extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
     };
+
+    const Button = styled.button`
+    color: palevioletred;
+    `
     return (
       <>
       <div>
@@ -67,11 +72,18 @@ class LandingPage extends Component {
             </p>
           </div>
         </div>
-        <Button
-          variant="contained"
-          color="primary">
-          View Our Menu
+        <Link 
+        to="/menu"
+        >
+            <Button
+              primary
+              variant="contained"
+            >
+              View Our Menu
         </Button>
+        </Link>
+        
+
       </div>
       </>
     );

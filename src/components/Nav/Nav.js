@@ -28,8 +28,8 @@ const Nav = (props) => {
     this.props.history.push('/order');
   }
 
-  const Button = styled.button`
-  color: yellow;
+  let Button = styled.button`
+  color: palevioletred;
   `
 
   return (
@@ -54,13 +54,14 @@ const Nav = (props) => {
               </Typography>
             </Grid>
             <Grid>
-              <Button 
-              primary
-              component={ Link } 
-              to="/order" 
-              variant="contained">
-                Order Online
+              <Link to="/order">
+                <Button
+                  primary
+                  variant="contained">
+                  Order Online
               </Button>
+              </Link>
+
             </Grid>
           </Grid>
           {/* <Grid 
