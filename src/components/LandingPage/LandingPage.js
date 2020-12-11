@@ -8,10 +8,20 @@ import "slick-carousel/slick/slick-theme.css";
 import Grid from "@material-ui/core/Grid";
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import { Twitter, Instagram } from '@material-ui/icons';
 
 
 // CUSTOM COMPONENTS
 import RegisterForm from '../RegisterForm/RegisterForm';
+import { makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    margin: theme.spacing(2),
+  }
+}))
 
 class LandingPage extends Component {
   state = {
@@ -21,6 +31,8 @@ class LandingPage extends Component {
   onLogin = (event) => {
     this.props.history.push('/login');
   };
+
+  
 
   render() {
     const settings = {
@@ -34,6 +46,9 @@ class LandingPage extends Component {
     const Button = styled.button`
     color: palevioletred;
     `
+
+    const classes = useStyles();
+
     return (
       <>
       <div>
@@ -82,9 +97,21 @@ class LandingPage extends Component {
               View Our Menu
         </Button>
         </Link>
-        
 
       </div>
+      <Grid
+      justify="space-between"
+      container
+      spacing={24}
+      >
+          <AppBar 
+          position="static"
+          style={classes.root}
+          >
+            <Instagram fontSize="large"></Instagram>
+            <Twitter fontSize="large"></Twitter>
+          </AppBar>
+      </Grid>
       </>
     );
   }
