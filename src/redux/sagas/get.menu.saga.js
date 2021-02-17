@@ -3,6 +3,8 @@ import axios from "axios";
 
 function* fetchMenu() {
     try {
+        console.log(`we in fetch menu`);
+        
         const response = yield axios.get(`api/getMenu`)
         yield put ({ type: 'SET_MENU', payload: response.data });
     }
