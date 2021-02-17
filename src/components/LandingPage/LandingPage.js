@@ -84,7 +84,7 @@ class LandingPage extends Component {
           </div>
           <div>
             <Link
-              to="/menu"
+              to="/order"
             >
               <Button
                 primary

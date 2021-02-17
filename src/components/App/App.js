@@ -17,8 +17,8 @@ import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import OrderOnline from '../OrderOnline/OrderOnline';
-import Menu from "../Menu/Menu";
 import './App.css';
+import OrderMenu from "../OrderOnlineMenu/OrderOnlineMenu";
 
 class App extends Component {
   componentDidMount() {
@@ -49,8 +49,8 @@ class App extends Component {
             />
             <Route
             exact
-            path="/menu"
-            component={Menu}
+            path="/ordermenu"
+            component={OrderMenu}
             />
 
             {/* For protected routes, the view could show one of several things on the same route.
