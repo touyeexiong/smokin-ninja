@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import OrderOnlineMenu from '../OrderOnlineMenu/OrderOnlineMenu'
 import {
     HashRouter as Router,
     Route,
@@ -13,6 +14,7 @@ class OrderOnline extends Component {
         return (
             <>
             <h1>
+                <OrderOnline />
                 we in OrderOnline homie.
             </h1>
             </>
