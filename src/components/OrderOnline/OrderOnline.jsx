@@ -14,7 +14,7 @@ class OrderOnline extends Component {
         return (
             <>
             <h1>
-                <OrderOnline />
+                <OrderOnlineMenu />
                 we in OrderOnline homie.
             </h1>
             </>
