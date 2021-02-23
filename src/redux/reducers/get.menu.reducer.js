@@ -1,4 +1,4 @@
-const getMenuReducer = ( state = {}, action ) => {
+const getMenuReducer = ( state = [], action ) => {
 switch (action.type) {
     case 'SET_MENU':
         return action.payload;
