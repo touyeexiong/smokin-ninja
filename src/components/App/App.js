@@ -23,7 +23,6 @@ import OrderMenu from "../OrderOnlineMenu/OrderOnlineMenu";
 class App extends Component {
   componentDidMount() {
     this.props.dispatch({ type: 'FETCH_USER' });
-    this.props.dispatch({ type: 'FETCH_MENU' });
   }
 
   render() {

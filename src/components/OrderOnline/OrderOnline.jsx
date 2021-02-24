@@ -25,7 +25,7 @@ class OrderOnline extends Component {
                         {this.props.store.getMenu.map((items) => {
                         return (
                             <>
-                            <OrderOnline />
+                            {/* <OrderOnlineMenu /> */}
                             <div>{items.id}</div>
                             </>
                         )
