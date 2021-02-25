@@ -5,7 +5,7 @@ class OrderOnlineMenu extends Component {
     render () {
         return (
             <>
-            <h1>We in OrderOnlineMenu bro</h1>
+            <h1>{this.props.name}</h1>
             </>
         )
     }
