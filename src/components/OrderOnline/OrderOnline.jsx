@@ -26,7 +26,9 @@ class OrderOnline extends Component {
                         {this.props.store.getMenu.map((items) => {
                         return (
                             <>
+                                <Grid container spacing={3} >
                             <OrderOnlineMenu id={items.id} name={items.name} price={items.price}/>
+                                </Grid>
                             </>
                         )
                     })}
