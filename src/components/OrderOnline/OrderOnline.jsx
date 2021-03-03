@@ -9,6 +9,7 @@ import {
 import mapStoreToProps from "../../redux/mapStoreToProps"
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
+import './OrderOnline.css';
 
 import { connect } from 'react-redux';
 
@@ -26,7 +27,7 @@ class OrderOnline extends Component {
                         {this.props.store.getMenu.map((items) => {
                         return (
                             <>
-                                <Grid container spacing={3} >
+                                <Grid container spacing={3} className="grid">
                             <OrderOnlineMenu id={items.id} name={items.name} price={items.price}/>
                                 </Grid>
                             </>
