@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import LogOutButton from '../LogOutButton/LogOutButton';
+// import LogOutButton from '../LogOutButton/LogOutButton';
 import './Nav.css';
 import mapStoreToProps from '../../redux/mapStoreToProps';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Grid from '@material-ui/core/Grid';
@@ -24,9 +24,9 @@ const Nav = (props) => {
     loginLinkData.text = '';
   }
 
-  let handleOrderOnline =  () => {
-    this.props.history.push('/order');
-  }
+  // let handleOrderOnline =  () => {
+  //   this.props.history.push('/order');
+  // }
 
   let Button = styled.button`
   color: palevioletred;

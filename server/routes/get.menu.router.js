@@ -4,9 +4,7 @@ const axios = require('axios');
 
 router.get('/', (req, res) => {
     axios.get(`https://sandbox.dev.clover.com/v3/merchants/${process.env.SMOKIN_MERCH_ID}/items?access_token=${process.env.SMOKIN_API_TOKEN}`)
-    .then((response) => {
-        console.log(response.data.elements);
-        
+    .then((response) => {        
         res.send(response.data.elements)
     })
     .catch((err) => {

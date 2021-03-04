@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import OrderOnlineMenu from '../OrderOnlineMenu/OrderOnlineMenu'
-import {
-    HashRouter as Router,
-    Route,
-    Redirect,
-    Switch,
-} from 'react-router-dom';
+// import {
+//     HashRouter as Router,
+//     Route,
+//     Redirect,
+//     Switch,
+// } from 'react-router-dom';
 import mapStoreToProps from "../../redux/mapStoreToProps"
 import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
+// import Paper from '@material-ui/core/Paper'
 import './OrderOnline.css';
 
 import { connect } from 'react-redux';

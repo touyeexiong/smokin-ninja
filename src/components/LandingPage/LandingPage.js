@@ -9,11 +9,11 @@ import Grid from "@material-ui/core/Grid";
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
 import AppBar from '@material-ui/core/AppBar';
-import { Twitter, Instagram, Facebook } from '@material-ui/icons';
+import { Instagram, Facebook } from '@material-ui/icons';
 
 
 // CUSTOM COMPONENTS
-import RegisterForm from '../RegisterForm/RegisterForm';
+// import RegisterForm from '../RegisterForm/RegisterForm';
 
 
 class LandingPage extends Component {
@@ -51,16 +51,16 @@ class LandingPage extends Component {
             <h2> Single Item</h2>
             <Slider {...settings}>
               <div>
-                <img src="http://placekitten.com/g/400/200" />
+                <img alt="cat placeholder" src="http://placekitten.com/g/400/200" />
               </div>
               <div>
-                <img src="http://placekitten.com/g/400/200" />
+                <img alt="cat placeholder" src="http://placekitten.com/g/400/200" />
               </div>
               <div>
-                <img src="http://placekitten.com/g/400/200" />
+                <img alt="cat placeholder" src="http://placekitten.com/g/400/200" />
               </div>
               <div>
-                <img src="http://placekitten.com/g/400/200" />
+                <img alt="cat placeholder" src="http://placekitten.com/g/400/200" />
               </div>
             </Slider>
           </Grid>
