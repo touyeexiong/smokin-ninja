@@ -47,7 +47,7 @@ class LandingPage extends Component {
     return (
       <>
         <div>
-          <Grid className="grid-col">
+          <Grid className="grid-col grid-col_10">
             <h2> Single Item</h2>
             <Slider {...settings}>
               <div>

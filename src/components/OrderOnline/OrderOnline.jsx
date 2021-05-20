@@ -19,12 +19,13 @@ class OrderOnline extends Component {
 
         return (
             <>
-                <h1>
+                <h1>                we in OrderOnline homie.
+            </h1>
                     <Grid classname="grid" container spacing={3}>
                         {this.props.store.getMenu.map((items) => {
                             return (
                                 <>
-                                    <Grid item xs={4} className="grid-col" spacing={0} direction="column" justify="center" alignItems="center">
+                                    <Grid item xs={4} container className="grid-col" spacing={0} direction="column" justify="center" alignItems="center">
                                         <Paper className="paper">
                                             <OrderOnlineMenu id={items.id} name={items.name} price={items.price} />
                                         </Paper>
@@ -33,8 +34,7 @@ class OrderOnline extends Component {
                             )
                         })}
                     </Grid>
-                we in OrderOnline homie.
-            </h1>
+
             </>
         )
     }
