@@ -9,14 +9,9 @@ class OrderOnlineMenu extends Component {
     render () {
         return (
             <>
-            {/* <h1>{this.props.name}</h1> */}
-            <div>
-                        <Grid container item xs={12}>
-                            <div className="grid" flexGrow={1} id={this.props.id}>{this.props.name} {this.props.price}</div>
-                        </Grid>
-            </div>
-
-
+                <div>
+                    <div className="grid" flexGrow={1} id={this.props.id}>{this.props.name} {this.props.price}</div>
+                </div>
             </>
         )
     }

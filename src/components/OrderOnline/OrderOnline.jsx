@@ -17,12 +17,12 @@ class OrderOnline extends Component {
         return (
             <>
                 <h1>
-                    <Grid classname="grid">
+                    <Grid classname="grid" container spacing={3}>
                         {this.props.store.getMenu.map((items) => {
                             return (
                                 <>
-                                    <Grid item xs={4} className="grid-col">
-                                        <Paper>
+                                    <Grid item xs={3} className="grid-col" spacing={0} direction="column" justify="center" alignItems="center">
+                                        <Paper >
                                             <OrderOnlineMenu id={items.id} name={items.name} price={items.price} />
                                         </Paper>
                                     </Grid>
