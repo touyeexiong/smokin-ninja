@@ -12,7 +12,7 @@ class OrderOnlineMenu extends Component {
     render () {
         return (
             <>
-                <Paper onClick={this.handleSelection} className="paper">
+                <Paper elevation={4} onClick={this.handleSelection} className="paper">
                     <div className="grid" flexGrow={1} id={this.props.id}>{this.props.name} {this.props.price}</div>
                 </Paper>
             </>
