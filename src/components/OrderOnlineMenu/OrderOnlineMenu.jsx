@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Grid from '@material-ui/core/Grid';
 import './OrderOnlineMenu.css';
+import Paper from '@material-ui/core/Paper'
 
 class OrderOnlineMenu extends Component {
 
@@ -12,9 +12,9 @@ class OrderOnlineMenu extends Component {
     render () {
         return (
             <>
-                <div>
-                    <div onClick={this.handleSelection} className="grid" flexGrow={1} id={this.props.id}>{this.props.name} {this.props.price}</div>
-                </div>
+                <Paper onClick={this.handleSelection} className="paper">
+                    <div className="grid" flexGrow={1} id={this.props.id}>{this.props.name} {this.props.price}</div>
+                </Paper>
             </>
         )
     }

@@ -9,7 +9,9 @@ import { connect } from 'react-redux';
 
 class OrderOnline extends Component {
 
-
+    handleSelection = () => {
+        console.log(`you clicked`, this.props.id);
+    }
     
 
     componentDidMount() {
@@ -26,9 +28,9 @@ class OrderOnline extends Component {
                             return (
                                 <>
                                     <Grid item xs={4} container className="grid-col" spacing={0} direction="column" justify="center" alignItems="center">
-                                        <Paper className="paper">
-                                            <OrderOnlineMenu id={items.id} name={items.name} price={items.price} />
-                                        </Paper>
+                                        {/* <Paper className="paper" onClick={this.handleSelection}> */}
+                                            <OrderOnlineMenu  id={items.id} name={items.name} price={items.price} />
+                                        {/* </Paper> */}
                                     </Grid>
                                 </>
                             )
