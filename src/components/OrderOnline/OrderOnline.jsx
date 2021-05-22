@@ -18,8 +18,8 @@ class OrderOnline extends Component {
 
         return (
             <>
-                <h1>we in OrderOnline homie.</h1>
-                    <Grid classname="grid" container spacing={3}>
+                    <Grid className="grid-col grid-col_10" container spacing={3}>
+
                         {this.props.store.getMenu.map((items) => {
                             return (
                                 <>
