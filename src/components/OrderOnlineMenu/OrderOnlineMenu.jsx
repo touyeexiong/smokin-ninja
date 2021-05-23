@@ -4,15 +4,21 @@ import './OrderOnlineMenu.css';
 import Paper from '@material-ui/core/Paper'
 import ToggleButton from '@material-ui/lab/ToggleButton';
 class OrderOnlineMenu extends Component {
+    state = {
+        selected: '',
+    };
 
     handleSelection = () => {
         console.log(`you clicked`, this.props.id);
+        this.setState({
+            selected: 'selected'
+        })
     }
 
     render () {
         return (
             <>
-                <ToggleButton>
+                <ToggleButton selected={this.state.selected} onClick={this.handleSelection}>
                     <Paper elevation={5} onClick={this.handleSelection} className="paper">
                         <div className="grid" flexGrow={1} id={this.props.id}>{this.props.name} {this.props.price}</div>
                     </Paper>
