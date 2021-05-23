@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './OrderOnlineMenu.css';
 import Paper from '@material-ui/core/Paper'
-
+import ToggleButton from '@material-ui/lab/ToggleButton';
 class OrderOnlineMenu extends Component {
 
     handleSelection = () => {
@@ -12,9 +12,11 @@ class OrderOnlineMenu extends Component {
     render () {
         return (
             <>
-                <Paper elevation={4} onClick={this.handleSelection} className="paper">
-                    <div className="grid" flexGrow={1} id={this.props.id}>{this.props.name} {this.props.price}</div>
-                </Paper>
+                <ToggleButton>
+                    <Paper elevation={5} onClick={this.handleSelection} className="paper">
+                        <div className="grid" flexGrow={1} id={this.props.id}>{this.props.name} {this.props.price}</div>
+                    </Paper>
+                </ToggleButton>
             </>
         )
     }
