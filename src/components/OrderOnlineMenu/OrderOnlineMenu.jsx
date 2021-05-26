@@ -6,22 +6,13 @@ import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 class OrderOnlineMenu extends Component {
     state = {
-        selected: "",
+        selected: ''
     };
 
-    handleSelection = () => {
+    handleSelection = (e, value) => {
         console.log(`you clicked`, this.props.id);
-        // if (this.state.selected = '') {
-        //     this.setState({
-        //         selected: 'selected'
-        //     })
-        // } else {
-        //     this.setState({
-        //         selected: ''
-        //     })
-        // }
         this.setState({
-            selected: "apples"
+            selected: value
         })
         console.log(this.state.selected);
         
@@ -30,17 +21,20 @@ class OrderOnlineMenu extends Component {
     render () {
         return (
             <>
-            <ToggleButtonGroup  onClick={this.handleSelection} value={this.state.selected}>
-                    <ToggleButton value="apples">
-                    Testing
-                </ToggleButton>
-                
+                <ToggleButtonGroup 
+                    value={this.state.selected}
+                    onChange={this.handleSelection}
+                    name="menuitem"
+                    id="item-select"
+                    exclusive={false} 
+                    >
+                    <ToggleButton value={this.props.id}>
+                        <Paper elevation={5}  className="paper">
+                            <div className="grid" flexGrow={1} id={this.props.id}>{this.props.name} {this.props.price}</div>
+                        </Paper>
+                    </ToggleButton>
             </ToggleButtonGroup>
-                <ToggleButton onClick={this.handleSelection}>
-                    <Paper elevation={5} onClick={this.handleSelection} className="paper">
-                        <div className="grid" flexGrow={1} id={this.props.id}>{this.props.name} {this.props.price}</div>
-                    </Paper>
-                </ToggleButton>
+
             </>
         )
     }

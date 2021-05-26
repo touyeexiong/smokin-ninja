@@ -4,7 +4,21 @@ import mapStoreToProps from "../../redux/mapStoreToProps"
 import Grid from '@material-ui/core/Grid'
 import './OrderOnline.css';
 import { connect } from 'react-redux';
+import ToggleButton from '@material-ui/lab/ToggleButton';
+import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
+
 class OrderOnline extends Component {
+    state = {
+        date: ''
+    }
+
+    handleToggleChange = (e, value) => {
+        this.setState({
+            date: value
+        })
+        console.log(this.state.date);
+        
+    }
 
     handleSelection = () => {
         console.log(`you clicked`, this.props.id);
@@ -18,6 +32,17 @@ class OrderOnline extends Component {
 
         return (
             <>
+                <ToggleButtonGroup
+                    value={this.state.date}
+                    onChange={this.handleToggleChange}
+                    name="date"
+                    id="date-select"
+                    exclusive={false}
+                    size="small">
+                    <ToggleButton value="today">Today</ToggleButton>
+                    <ToggleButton value="tomorrow">Tomorrow</ToggleButton>
+                    <ToggleButton value="week">This week</ToggleButton>
+                </ToggleButtonGroup>
                     <Grid className="grid-col grid-col_10" container spacing={3}>
 
                         {this.props.store.getMenu.map((items) => {
