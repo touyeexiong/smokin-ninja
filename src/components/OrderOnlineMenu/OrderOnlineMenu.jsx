@@ -7,7 +7,7 @@ import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 class OrderOnlineMenu extends Component {
     state = {
         selected: ''
-    };
+    }
 
     handleSelection = (e, value) => {
         console.log(`you clicked`, this.props.id);

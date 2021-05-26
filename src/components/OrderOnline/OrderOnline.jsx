@@ -20,11 +20,6 @@ class OrderOnline extends Component {
         
     }
 
-    handleSelection = () => {
-        console.log(`you clicked`, this.props.id);
-    }
-    
-
     componentDidMount() {
         this.props.dispatch({ type: 'FETCH_MENU' });
     }
