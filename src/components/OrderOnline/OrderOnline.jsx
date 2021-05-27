@@ -18,7 +18,6 @@ class OrderOnline extends Component {
             date: value
         })
         console.log(this.state.date);
-        
     }
 
     handleCheck = () => {
@@ -45,12 +44,13 @@ class OrderOnline extends Component {
                     <ToggleButton value="week">This week</ToggleButton>
                 </ToggleButtonGroup>
                     <Grid className="grid-col grid-col_10" container spacing={3}>
-
+                    
                         {this.props.store.getMenu.map((items) => {
                             return (
                                 <>
                                     <Grid item xs={4} container className="grid-col" spacing={0} direction="column" justify="center" alignItems="center">
-                                            <OrderOnlineMenu  id={items.id} name={items.name} price={items.price} />
+                                            {/* <OrderOnlineMenu  id={items.id} name={items.name} price={items.price} /> */}
+                                            {items.id}
                                     </Grid>
                                 </>
                             )

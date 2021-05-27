@@ -11,16 +11,15 @@ class OrderOnlineMenu extends Component {
     }
 
     handleSelection = (e, value) => {
-        console.log(`you clicked`, this.props.id);
         this.setState({
             selected: value
         })
         console.log(this.state.selected);
         
     }
+
     handleCheck = () => {
         console.log(`selected state:`, this.state);
-        
     }
 
     render () {
@@ -29,7 +28,7 @@ class OrderOnlineMenu extends Component {
                 <ToggleButtonGroup 
                     value={this.state.selected}
                     onChange={this.handleSelection}
-                    name="menuitem"
+                    name="selected"
                     id="item-select"
                     exclusive={false} 
                     size="medium"
