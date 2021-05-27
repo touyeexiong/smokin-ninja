@@ -6,6 +6,7 @@ import './OrderOnline.css';
 import { connect } from 'react-redux';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
+import Button from "@material-ui/core/Button"
 
 class OrderOnline extends Component {
     state = {
@@ -18,6 +19,11 @@ class OrderOnline extends Component {
         })
         console.log(this.state.date);
         
+    }
+
+    handleCheck = () => {
+        console.log(`selected state:`, this.state.date);
+
     }
 
     componentDidMount() {
@@ -50,7 +56,7 @@ class OrderOnline extends Component {
                             )
                         })}
                     </Grid>
-
+                <Button onClick={this.handleCheck}>State Check</Button>
             </>
         )
     }
