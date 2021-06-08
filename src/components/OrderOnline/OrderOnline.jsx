@@ -10,7 +10,8 @@ import Button from "@material-ui/core/Button"
 
 class OrderOnline extends Component {
     state = {
-        selected: ''
+        selected: '',
+        date: ''
     }
 
     handleToggleChange = (e, value) => {
@@ -29,18 +30,21 @@ class OrderOnline extends Component {
     }
 
     handleCheck = () => {
-        console.log(`selected state:`, this.state.selected);
+        console.log(`selected state:`, this.state);
 
     }
 
     componentDidMount() {
         this.props.dispatch({ type: 'FETCH_MENU' });
     }
+
     render() {
+
 
         return (
             <>
-                {/* <ToggleButtonGroup
+                <Button onClick={this.handleCheck}>State Check</Button>
+                <ToggleButtonGroup
                     value={this.state.date}
                     onChange={this.handleToggleChange}
                     name="date"
@@ -50,7 +54,7 @@ class OrderOnline extends Component {
                     <ToggleButton value="today">Today</ToggleButton>
                     <ToggleButton value="tomorrow">Tomorrow</ToggleButton>
                     <ToggleButton value="week">This week</ToggleButton>
-                </ToggleButtonGroup> */}
+                </ToggleButtonGroup>
                     <Grid className="grid-col grid-col_10" container spacing={3}>
                     <ToggleButtonGroup
                         value={this.state.selected}
@@ -59,24 +63,22 @@ class OrderOnline extends Component {
                         id="item-select"
                         exclusive={false}
                         size="medium">
-                        <Grid item xs={4} container className="grid-col" spacing={0} direction="column" justify="center" alignItems="center">
-
                         {this.props.store.getMenu.map((items) => {
                             return (
-                                <React.Fragment key={items.id}>
-                                        <OrderOnlineMenu  id={items.id} name={items.name} price={items.price} />
-                                        {/* <ToggleButton value={items.id}> */}
-                                        {/* <div className="grid" key={items.id}>{items.id}</div>
-                                            {items.id}
-                                        </ToggleButton> */}
-                                </React.Fragment>
+                                <div key={items.id} value={items.id}>
+                                        {/* <OrderOnlineMenu  id={items.id} name={items.name} price={items.price} /> */}
+                                        <ToggleButton value={items.id}>
+                                        <div className="grid">{items.id}</div>
+                                        </ToggleButton>
+                                </div>
                             )
                         })}
-                        </Grid>
+                        <div value="Testing"><ToggleButton value="Testing">Testing</ToggleButton>
+</div>
+
                     </ToggleButtonGroup>
 
                     </Grid>
-                <Button onClick={this.handleCheck}>State Check</Button>
             </>
         )
     }
