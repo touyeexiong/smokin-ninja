@@ -25,21 +25,10 @@ class OrderOnlineMenu extends Component {
     render () {
         return (
             <>
-                {/* <ToggleButtonGroup 
-                    value={this.state.selected}
-                    onChange={this.handleSelection}
-                    name="selected"
-                    id="item-select"
-                    exclusive={false} 
-                    size="medium"
-                    > */}
-                    <ToggleButton value={this.props.id}>
-                        {/* <Paper elevation={5}  className="paper"> */}
+
+                        <Paper elevation={5}  className="paper">
                             <div className="grid" flexGrow={1} id={this.props.id}>{this.props.name} {this.props.price}</div>
-                        {/* </Paper> */}
-                    </ToggleButton>
-            {/* </ToggleButtonGroup> */}
-            <Button onClick={this.handleCheck}>State Check</Button>
+                        </Paper>
             </>
         )
     }

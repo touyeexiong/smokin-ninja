@@ -44,39 +44,17 @@ class OrderOnline extends Component {
         return (
             <>
                 <Button onClick={this.handleCheck}>State Check</Button>
-                <ToggleButtonGroup
-                    value={this.state.date}
-                    onChange={this.handleToggleChange}
-                    name="date"
-                    id="date-select"
-                    exclusive={false}
-                    size="small">
-                    <ToggleButton value="today">Today</ToggleButton>
-                    <ToggleButton value="tomorrow">Tomorrow</ToggleButton>
-                    <ToggleButton value="week">This week</ToggleButton>
-                </ToggleButtonGroup>
+
                     <Grid className="grid-col grid-col_10" container spacing={3}>
-                    <ToggleButtonGroup
-                        value={this.state.selected}
-                        onChange={this.handleSelection}
-                        name="selected"
-                        id="item-select"
-                        exclusive={false}
-                        size="medium">
+
                         {this.props.store.getMenu.map((items) => {
                             return (
                                 <div key={items.id} value={items.id}>
-                                        {/* <OrderOnlineMenu  id={items.id} name={items.name} price={items.price} /> */}
-                                        <ToggleButton value={items.id}>
-                                        <div className="grid">{items.id}</div>
-                                        </ToggleButton>
+                                        <OrderOnlineMenu  id={items.id} name={items.name} price={items.price} />
+
                                 </div>
                             )
                         })}
-                        <div value="Testing"><ToggleButton value="Testing">Testing</ToggleButton>
-</div>
-
-                    </ToggleButtonGroup>
 
                     </Grid>
             </>
