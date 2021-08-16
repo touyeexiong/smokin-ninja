@@ -4,10 +4,6 @@ import mapStoreToProps from "../../redux/mapStoreToProps"
 import Grid from '@material-ui/core/Grid'
 import './OrderOnline.css';
 import { connect } from 'react-redux';
-import ToggleButton from '@material-ui/lab/ToggleButton';
-import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
-import Button from "@material-ui/core/Button"
-
 class OrderOnline extends Component {
     state = {
         selected: '',
@@ -21,42 +17,26 @@ class OrderOnline extends Component {
         console.log(this.state.date);
     }
 
-    handleSelection = (e, value) => {
-        this.setState({
-            selected: value
-        })
-        console.log(this.state.selected);
-
-    }
-
-    handleCheck = () => {
-        console.log(`selected state:`, this.state);
-
-    }
-
     componentDidMount() {
         this.props.dispatch({ type: 'FETCH_MENU' });
     }
 
     render() {
-
-
         return (
             <>
-                <Button onClick={this.handleCheck}>State Check</Button>
-
-                    <Grid className="grid-col grid-col_10" container spacing={3}>
-
-                        {this.props.store.getMenu.map((items) => {
-                            return (
-                                <div key={items.id} value={items.id}>
-                                        <OrderOnlineMenu  id={items.id} name={items.name} price={items.price} />
-
-                                </div>
-                            )
-                        })}
-
+            <div className="grid">
+                <div className="grid-col grid-col_8">
+                    <Grid container spacing={1}>
+                            {this.props.store.getMenu.map((items) => {
+                                return (
+                                    <div>
+                                        <OrderOnlineMenu key={items.id} id={items.id} name={items.name} price={items.price} />
+                                    </div>
+                                )
+                            })}
                     </Grid>
+                </div>
+            </div>
             </>
         )
     }

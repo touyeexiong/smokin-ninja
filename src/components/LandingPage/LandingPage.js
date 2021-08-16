@@ -10,6 +10,7 @@ import styled from 'styled-components';
 import { Link } from "react-router-dom";
 import AppBar from '@material-ui/core/AppBar';
 import { Instagram, Facebook } from '@material-ui/icons';
+import Paper from '@material-ui/core/Paper'
 
 
 // CUSTOM COMPONENTS
@@ -130,7 +131,34 @@ class LandingPage extends Component {
               dignissim efficitur. Quisque eget eros metus. Vestibulum bibendum
               fringilla nibh a luctus. Duis a sapien metus.
             </p>
+            <Grid container spacing={1}>
+              <Grid container item xs={12} spacing={3}>
+                <Grid item xs={4}>
+                  <Paper>Hello</Paper>
+                </Grid>
+              </Grid>
+              <Grid container item xs={12} spacing={3}>
+                <Grid item xs={4}>
+                  <Paper>Hello</Paper>
+                </Grid>
+              </Grid>
+              <Grid container item xs={12} spacing={3}>
+                <Grid item xs={4}>
+                  <Paper>Hello</Paper>
+                </Grid>
+              </Grid>              <Grid container item xs={12} spacing={3}>
+                <Grid item xs={4}>
+                  <Paper>Hello</Paper>
+                </Grid>
+              </Grid>              <Grid container item xs={12} spacing={3}>
+                <Grid item xs={4}>
+                  <Paper>Hello</Paper>
+                </Grid>
+              </Grid>
+            </Grid>
+            
           </div>
+          
         </div>
       </>
     );
