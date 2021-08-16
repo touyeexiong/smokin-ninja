@@ -66,7 +66,6 @@ class LandingPage extends Component {
             </Slider>
           </Grid>
         </div>
-        <div className="">
           <div className="grid">
             <div className="grid-col grid-col_8">
               <p>
@@ -97,7 +96,6 @@ class LandingPage extends Component {
           </div>
 
 
-        </div>
 
         <AppBar
           position="static"

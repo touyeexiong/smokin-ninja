@@ -11,13 +11,11 @@ class OrderOnlineMenu extends Component {
     render () {
         return (
             <>
-                <Grid container item xs={12} spacing={3}>
-                    <Grid item  xs={4}>
-                        <Paper elevation={5} className="paper">
+                    <Grid display="flex" flexWrap="wrap" item xs={4}>
+                        <Paper className="paper" flex={1} elevation={5} className="paper">
                             {this.props.name} {this.props.price}
                         </Paper>                    
                     </Grid>
-                </Grid>
             </>
         )
     }
