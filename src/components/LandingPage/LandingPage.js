@@ -66,7 +66,7 @@ class LandingPage extends Component {
             </Slider>
           </Grid>
         </div>
-          <div className="grid">
+        <div className="grid">
             <div className="grid-col grid-col_8">
               <p>
                 Testing testing 123
@@ -81,8 +81,8 @@ class LandingPage extends Component {
                 fringilla nibh a luctus. Duis a sapien metus.
             </p>
             </div>
-          </div>
-          <div>
+        </div>
+        <div>
             <Link
               to="/order"
             >
@@ -93,9 +93,7 @@ class LandingPage extends Component {
                 View Our Menu
         </Button>
             </Link>
-          </div>
-
-
+        </div>
 
         <AppBar
           position="static"
