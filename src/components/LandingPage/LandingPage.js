@@ -126,35 +126,8 @@ class LandingPage extends Component {
               nunc interdum, eu interdum justo facilisis. Sed pulvinar nulla ac
               dignissim efficitur. Quisque eget eros metus. Vestibulum bibendum
               fringilla nibh a luctus. Duis a sapien metus.
-            </p>
-            <Grid container spacing={1}>
-              <Grid container item xs={12} spacing={3}>
-                <Grid item xs={4}>
-                  <Paper>Hello</Paper>
-                </Grid>
-              </Grid>
-              <Grid container item xs={12} spacing={3}>
-                <Grid item xs={4}>
-                  <Paper>Hello</Paper>
-                </Grid>
-              </Grid>
-              <Grid container item xs={12} spacing={3}>
-                <Grid item xs={4}>
-                  <Paper>Hello</Paper>
-                </Grid>
-              </Grid>              <Grid container item xs={12} spacing={3}>
-                <Grid item xs={4}>
-                  <Paper>Hello</Paper>
-                </Grid>
-              </Grid>              <Grid container item xs={12} spacing={3}>
-                <Grid item xs={4}>
-                  <Paper>Hello</Paper>
-                </Grid>
-              </Grid>
-            </Grid>
-            
+            </p>            
           </div>
-          
         </div>
       </>
     );

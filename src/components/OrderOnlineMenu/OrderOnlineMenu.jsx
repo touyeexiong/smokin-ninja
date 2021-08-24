@@ -11,9 +11,9 @@ class OrderOnlineMenu extends Component {
     render () {
         return (
             <>
-                    <Grid className="grid-col grid-col_8" display="flex" flexWrap="wrap" item xs={3}>
+                    <Grid className="grid-col grid-col_8" display="flex" flexWrap="wrap" item xs={6} sm={3}>
                         <Paper className="paper" flex={1} elevation={5}>
-                            {this.props.name} {this.props.price}
+                            {this.props.name}: ${this.props.price}
                         </Paper>                    
                     </Grid>
             </>

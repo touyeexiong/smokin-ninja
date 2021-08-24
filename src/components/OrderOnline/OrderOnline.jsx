@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import OrderOnlineMenu from '../OrderOnlineMenu/OrderOnlineMenu';
 import mapStoreToProps from "../../redux/mapStoreToProps";
 import Grid from '@material-ui/core/Grid';
-import '../LandingPage/LandingPage.css';
+import './OrderOnline.css';
 import { connect } from 'react-redux';
 class OrderOnline extends Component {
 

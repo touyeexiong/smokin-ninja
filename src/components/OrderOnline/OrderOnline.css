@@ -15,6 +15,7 @@ Grid
   /* defaults to 'flex-start' */
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .grid-col {
