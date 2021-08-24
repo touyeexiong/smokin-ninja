@@ -9,6 +9,7 @@ Grid
 .paper {
   width: auto;
   height: auto;
+  text-align: center;
 }
 
 .grid {
