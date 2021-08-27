@@ -15,7 +15,7 @@ class OrderOnline extends Component {
             <>
                 <div className="grid">
                     <div className="grid-col grid-col_8">
-                        <Grid justify="space-evenly" container item spacing={3}>
+                        <Grid justify="space-evenly" container spacing={3}>
                             {this.props.store.getMenu.map((items) => {
                                 return (
                                         <OrderOnlineMenu key={items.id} id={items.id} name={items.name} price={items.price} />

@@ -6,6 +6,12 @@ Grid
   margin: 90%;
 }
 
+.info-section {
+  text-align: center;
+  padding: 10px;
+  font-size: large;
+}
+
 .grid {
   display: flex;
   flex: 0 1 auto;
